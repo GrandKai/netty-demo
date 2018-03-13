@@ -40,6 +40,8 @@ public class EchoServer {
                     .channel(NioServerSocketChannel.class)
                     .localAddress(this.port)
                     .childHandler(new ChannelInitializer<SocketChannel>() {
+
+                        @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(echoServerHandler);
                         }
