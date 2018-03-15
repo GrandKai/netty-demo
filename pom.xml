@@ -10,7 +10,8 @@
 		<module>nettych2</module>
         <module>nettych7</module>
 		<module>nettych9</module>
-	</modules>
+        <module>nettych10</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>netty-demo</name>
