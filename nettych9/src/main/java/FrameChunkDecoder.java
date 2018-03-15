@@ -14,10 +14,12 @@ public class FrameChunkDecoder extends ByteToMessageDecoder{
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
+
+//        System.out.println("decode的readerIndex：" + in.readerIndex());
         int readableBytes = in.readableBytes();
-        if (maxFrameSize < readableBytes) {
+        if (readableBytes > maxFrameSize ) {
             // discard the bytes
-            in.discardReadBytes();
+            in.clear();
             throw new TooLongFrameException();
         }
         ByteBuf buf = in.readBytes(readableBytes);
