@@ -11,6 +11,7 @@
         <module>nettych7</module>
 		<module>nettych9</module>
         <module>nettych10</module>
+        <module>nettych11</module>
     </modules>
 	<packaging>pom</packaging>
 
